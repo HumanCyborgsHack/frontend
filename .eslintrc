@@ -1,6 +1,6 @@
 {
     "root": true,
-    "extends": ["plugin:prettier/recommended"],
+    "extends": ["react-app", "plugin:prettier/recommended"],
     "rules": {
         "prettier/prettier": "warn"
     }
