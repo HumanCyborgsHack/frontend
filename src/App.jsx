@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import { Routing } from "@/routing/Routing";
 
+import Navbar from "@/components/Navbar";
+
 function App() {
     return (
         <>
@@ -8,6 +10,7 @@ function App() {
                 <title>Poli-Learning</title>
             </Helmet>
             <Routing />
+            <Navbar />
         </>
     );
 }
