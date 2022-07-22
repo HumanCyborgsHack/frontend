@@ -2,19 +2,14 @@ import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Search from "@/components/Search";
 
-const props = {
-    name: "Pedro"
-};
-
-export default function Student1Page() {
-    const { name } = props;
+export default function Header({ name }) {
     return (
         <Grid
             container
             sx={{
-                backgroundColor: "#3a5098",
+                backgroundColor: "#6680d3",
                 // border: "1px solid #000",
-                borderRadius: "0px 0px 15px 15px",
+                borderRadius: "0px 0px 20px 20px",
                 padding: "1rem"
             }}
         >
