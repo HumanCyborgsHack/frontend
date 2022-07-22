@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import { Routing } from "@/routing/Routing";
-import "./App.css";
 
 function App() {
     return (
