@@ -8,6 +8,7 @@ import LoginLogin from "../pages/LoginLogin";
 import Register from "../pages/Register";
 import Alumno2 from "@/pages/Alumno2/Alumno2";
 import { useGlobalContext } from "@/context/global";
+import VideoClase from "../pages/VideoClase";
 
 export function Routing() {
     const { user } = useGlobalContext();
@@ -25,8 +26,17 @@ export function Routing() {
                 {user.role === "alumno" && (
                     <Route path="alumno-1">
                         <Route index element={<Alumno1 />} />
+
+                        <Route path="matematicas">
+                            <Route index element={<Clase />} />
+                            <Route
+                                path="lineas-rectas"
+                                element={<VideoClase />}
+                            />
+                        </Route>
+
                         <Route path="materia" element={<Alumno2 />} />
-                        <Route path="matematicas" element={<Clase />} />
+
                     </Route>
                 )}
             </Routes>
