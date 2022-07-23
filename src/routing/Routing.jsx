@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import LoginLogin from "../pages/LoginLogin";
 import Register from "../pages/Register";
 import Alumno2 from "@/pages/Alumno2/Alumno2";
+import Institucion from "@/pages/Institucion";
 import { useGlobalContext } from "@/context/global";
 import VideoClase from "../pages/VideoClase";
 
@@ -22,6 +23,7 @@ export function Routing() {
                 <Route path="/register/register" element={<Register />} />
                 <Route path="/register/login" element={<LoginLogin />} />
                 <Route path="/register" element={<Login />} />
+                <Route path="/institucion" element={<Institucion />} />
 
                 {user.role === "alumno" && (
                     <Route path="alumno-1">
@@ -36,7 +38,6 @@ export function Routing() {
                         </Route>
 
                         <Route path="materia" element={<Alumno2 />} />
-
                     </Route>
                 )}
             </Routes>
