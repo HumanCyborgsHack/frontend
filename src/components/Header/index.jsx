@@ -3,9 +3,10 @@ import { Box } from "@mui/system";
 import Search from "@/components/Search";
 import logo from "@/assets/inicio/Logo.png";
 import background from "@/assets/inicio/Top_Box_Azul.png";
-import { Section } from "./styles";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Section, LinkButton } from "./styles";
 
-export default function Header({ name, children, searchDisabled }) {
+export default function Header({ name, children, searchDisabled, isBack }) {
     return (
         <Grid
             container
@@ -18,7 +19,13 @@ export default function Header({ name, children, searchDisabled }) {
             }}
         >
             <Grid item xs={3}>
-                <img src={logo} alt="" width={150} />
+                {isBack ? (
+                    <LinkButton to="../">
+                        <ArrowBackIcon />
+                    </LinkButton>
+                ) : (
+                    <img src={logo} alt="" width={150} />
+                )}
             </Grid>
             <Grid item xs={9}>
                 <Box
@@ -32,7 +39,7 @@ export default function Header({ name, children, searchDisabled }) {
                         height: "100%"
                     }}
                 >
-                    <h1>Hola! {name}</h1>
+                    {isBack ? null : <h1>Hola! {name}</h1>}
                     <Section>{children}</Section>
                 </Box>
             </Grid>
