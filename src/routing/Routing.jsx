@@ -5,6 +5,7 @@ import Alumno1 from "../pages/Alumno1";
 import Clase from "../pages/Clase";
 //import Alumno2 from "@/pages/Alumno2/Alumno2";
 import { useGlobalContext } from "@/context/global";
+import VideoClase from "../pages/VideoClase";
 
 export function Routing() {
     const { user } = useGlobalContext();
@@ -18,7 +19,13 @@ export function Routing() {
                 {user.role === "alumno" && (
                     <Route path="alumno-1">
                         <Route index element={<Alumno1 />} />
-                        <Route path="matematicas" element={<Clase />} />
+                        <Route path="matematicas">
+                            <Route index element={<Clase />} />
+                            <Route
+                                path="lineas-rectas"
+                                element={<VideoClase />}
+                            />
+                        </Route>
                     </Route>
                 )}
                 {/*<Route path="alumno-2" element={<Alumno2></Alumno2>} />*/}
