@@ -11,6 +11,9 @@ export function Default() {
                 <li>
                     <Link to="/alumno-2">Go to Stundent 2 page</Link>
                 </li>
+                <li>
+                    <Link to="/register">Go to Register page</Link>
+                </li>
             </ul>
         </Layout>
     );

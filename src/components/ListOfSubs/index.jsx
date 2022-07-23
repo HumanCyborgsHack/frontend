@@ -5,10 +5,11 @@ export function Sub({
     color = "#f7beef",
     image = "/images/math.svg",
     subject = "Español II",
+    link = "#",
     startsIn = false
 }) {
     return (
-        <Item color={color}>
+        <Item to={link} color={color}>
             <Img src={image} alt="" />
             <section>
                 <h3>{subject}</h3>
@@ -24,7 +25,7 @@ export default function ListOfSubs({ data }) {
             <h2>Tus clases</h2>
             <GridContainer>
                 {data.map((item) => (
-                    <Item key={item.id} color={item.color}>
+                    <Item to={item.link} key={item.id} color={item.color}>
                         <Img src={item.img} alt="" />
                         <section>
                             <h3>{item.subject}</h3>

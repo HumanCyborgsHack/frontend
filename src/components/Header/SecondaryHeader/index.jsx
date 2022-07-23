@@ -3,6 +3,7 @@ import { ArrowBack, Star } from "@mui/icons-material";
 import { Fab, IconButton, Tooltip } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Styles from "./Styles";
 
 export default function SecondaryHeader({
@@ -11,10 +12,15 @@ export default function SecondaryHeader({
     progress = 80
 }) {
     const classes = Styles();
+    const navigate = useNavigate();
 
     return (
         <Box className={classes.box}>
-            <Tooltip title="Regresar" className={classes.arrowBack}>
+            <Tooltip
+                title="Regresar"
+                className={classes.arrowBack}
+                onClick={() => navigate("../")}
+            >
                 <Fab color="primary">
                     <ArrowBack></ArrowBack>
                 </Fab>
