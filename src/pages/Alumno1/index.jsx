@@ -9,7 +9,9 @@ export default function Student1Page() {
     const { name } = props;
     return (
         <>
-            <Header name={name} />
+            <Header name={name}>
+                <h3>¡Llegó la hora de aprender!</h3>
+            </Header>
             <ListOfSubs />
         </>
     );

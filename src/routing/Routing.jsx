@@ -10,7 +10,7 @@ export function Routing() {
                 <Route path="/" element={<Default />}>
                     <Route path="*" element={<Default />} />
                 </Route>
-                <Route path="alumno-1" element={<Alumno1 />} />1
+                <Route path="alumno-1" element={<Alumno1 />} />
             </Routes>
         </BrowserRouter>
     );
