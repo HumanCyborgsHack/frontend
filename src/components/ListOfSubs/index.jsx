@@ -7,7 +7,7 @@ export default function ListOfSubs({ data }) {
             <h2>Tus clases</h2>
             <GridContainer>
                 {data.map((item) => (
-                    <Item key={item.id} color={item.color}>
+                    <Item to={item.link} key={item.id} color={item.color}>
                         <Img src={item.img} alt="" />
                         <section>
                             <h3>{item.subject}</h3>

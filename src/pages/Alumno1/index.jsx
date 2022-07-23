@@ -11,18 +11,21 @@ const data = [
         subject: "Matemáticas",
         in: "30 min",
         color: "#66d399",
+        link: "/matematicas",
         img: "https://thecatapi.com/api/images/get?format=src&type=gif"
     },
     {
         id: 2,
         subject: "Habla Inglesa",
-        color: "#66d399",
+        color: "#d39966",
+        link: "/ingles",
         img: "https://thecatapi.com/api/images/get?format=src&type=image"
     },
     {
         id: 3,
-        subject: "Habla Inglesa",
-        color: "#66d399",
+        subject: "Ciencias Naturales",
+        color: "#a876ef",
+        link: "/naturales",
         img: "https://thecatapi.com/api/images/get?format=src&type=image"
     }
 ];

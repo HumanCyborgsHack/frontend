@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export const GridContainer = styled.div`
@@ -5,7 +6,7 @@ export const GridContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin: 20px 0 70px 0;
-    & div:first-child {
+    & a:first-child {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
@@ -22,7 +23,7 @@ export const GridContainer = styled.div`
     }
 `;
 
-export const Item = styled.div(
+export const Item = styled(Link)(
     {
         display: "flex",
         flexDirection: "column",
