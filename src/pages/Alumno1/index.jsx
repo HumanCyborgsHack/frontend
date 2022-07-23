@@ -16,13 +16,13 @@ const data = [
     {
         id: 2,
         subject: "Habla Inglesa",
-        color: "#66d399",
+        color: "#668ad3",
         img: "https://thecatapi.com/api/images/get?format=src&type=image"
     },
     {
         id: 3,
         subject: "Habla Inglesa",
-        color: "#66d399",
+        color: "#d3bb66",
         img: "https://thecatapi.com/api/images/get?format=src&type=image"
     }
 ];
