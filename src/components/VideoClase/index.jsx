@@ -7,8 +7,8 @@ export default function VideoClase({ name, className, avatar, video }) {
                 <GoBackArrow />
                 <img src={avatar} alt="" />
                 <main>
-                    <h3>{className}</h3>
-                    <h4>Por: {name}</h4>
+                    <h4>{className}</h4>
+                    <h5>Por: {name}</h5>
                 </main>
             </Details>
             <Video

@@ -11,24 +11,20 @@ const data = [
     {
         id: 1,
         subject: "Matemáticas",
-        in: "30 min",
-        color: "#66d399",
+        in: "En 30 min",
+        color: "#688bdd",
         link: path + "/matematicas",
-        img: "https://thecatapi.com/api/images/get?format=src&type=gif"
+        img: "/images/math.webp"
     },
     {
         id: 2,
-        subject: "Habla Inglesa",
-        color: "#d39966",
         link: path + "/ingles",
-        img: "https://thecatapi.com/api/images/get?format=src&type=image"
+        img: "/assets/ALUMNO/HOME_MATERIAS/SeleccionArtesClase.png"
     },
     {
         id: 3,
-        subject: "Ciencias Naturales",
-        color: "#a876ef",
         link: path + "/naturales",
-        img: "https://thecatapi.com/api/images/get?format=src&type=image"
+        img: "/assets/ALUMNO/HOME_MATERIAS/SeleccionIdiomasClase.png"
     }
 ];
 

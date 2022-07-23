@@ -9,6 +9,7 @@ export const Video = styled.iframe`
 `;
 
 export const Details = styled.div`
+    text-align: right;
     display: flex;
     margin: 1rem;
     padding: 0.5rem 2rem;
