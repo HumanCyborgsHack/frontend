@@ -113,9 +113,8 @@ export default function Student1Page() {
                         paddingRight: "7rem",
                         paddingLeft: "7rem"
                     }}
-                    onClick={handleSubmit}
                 >
-                    Iniciar sesión
+                    <Link to="/alumno-1">Iniciar sesión</Link>
                 </button>
             </section>
         </>
