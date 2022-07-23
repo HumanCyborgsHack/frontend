@@ -8,6 +8,9 @@ export function Default() {
                 <li>
                     <Link to="/alumno-1">Go to Stundent 1 page</Link>
                 </li>
+                <li>
+                    <Link to="/alumno-2">Go to Stundent 2 page</Link>
+                </li>
             </ul>
         </Layout>
     );

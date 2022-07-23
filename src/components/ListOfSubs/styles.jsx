@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export const GridContainer = styled.div`
@@ -5,7 +6,7 @@ export const GridContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin: 20px 0 70px 0;
-    & div:first-child {
+    & a:first-child {
         position: relative;
         flex-direction: row;
         justify-content: space-between;
@@ -13,7 +14,7 @@ export const GridContainer = styled.div`
         & section {
             font-size: 1.2rem;
             position: absolute;
-            right: 50px;
+            right: 1rem;
             text-align: right;
         }
         & img {
@@ -22,14 +23,14 @@ export const GridContainer = styled.div`
     }
 `;
 
-export const Item = styled.div(
+export const Item = styled(Link)(
     {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         padding: "1rem",
-        borderRadius: "0.5rem"
+        borderRadius: "40px"
     },
     (props) => ({ backgroundColor: props.color })
 );
