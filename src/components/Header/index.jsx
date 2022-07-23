@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Search from "@/components/Search";
 import logo from "@/assets/inicio/Logo.png";
+import background from "@/assets/inicio/Top_Box_Azul.png";
 import { Section } from "./styles";
 
 export default function Header({ name, children, searchDisabled }) {
@@ -9,6 +10,8 @@ export default function Header({ name, children, searchDisabled }) {
         <Grid
             container
             sx={{
+                backgroundImage: `url(${background})`,
+                backgroundSize: "cover",
                 backgroundColor: "#6680d3",
                 // border: "1px solid #000",
                 borderRadius: "0px 0px 20px 20px"
