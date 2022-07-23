@@ -14,9 +14,10 @@ export function Routing() {
                 <Route path="/" element={<Default />}>
                     <Route path="*" element={<Default />} />
                 </Route>
-                <Route path="alumno-1" element={<Alumno1 />}>
-                    <Route path="matematicas" element={<Alumno1 />} />
-                </Route>
+                {user.role === "alumno" && (
+                    <Route path="alumno-1" element={<Alumno1 />} />
+                )}
+                {/*<Route path="alumno-2" element={<Alumno2></Alumno2>} />*/}
             </Routes>
         </BrowserRouter>
     );
