@@ -2,6 +2,7 @@ import { BarChartOutlined, Book, Home } from "@mui/icons-material";
 import { AppBar, Fab, IconButton, Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
 import { styled } from "@mui/material/styles";
+import Styles from "./Styles";
 
 const StyledFab = styled(Fab)({
     position: "absolute",
@@ -15,6 +16,8 @@ const StyledFab = styled(Fab)({
 });
 
 export default function Navbar() {
+    const classes = Styles();
+
     return (
         <AppBar
             position="fixed"
@@ -27,14 +30,14 @@ export default function Navbar() {
                     color="inherit"
                     aria-label="open drawer"
                 >
-                    <BarChartOutlined />
+                    <BarChartOutlined className={classes.icons} />
                 </IconButton>
                 <StyledFab size="large" color="secondary" aria-label="add">
-                    <Home></Home>
+                    <Home className={classes.icons}></Home>
                 </StyledFab>
                 <Box sx={{ flexGrow: 1 }} />
                 <IconButton size="large" color="inherit">
-                    <Book></Book>
+                    <Book className={classes.icons}></Book>
                 </IconButton>
             </Toolbar>
         </AppBar>
