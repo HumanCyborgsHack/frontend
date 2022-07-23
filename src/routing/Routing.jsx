@@ -6,6 +6,7 @@ import Clase from "../pages/Clase";
 import Login from "../pages/Login";
 import Alumno2 from "@/pages/Alumno2/Alumno2";
 import { useGlobalContext } from "@/context/global";
+import ClasesPorTema from "@/pages/ClasesPorTema";
 
 export function Routing() {
     const { user } = useGlobalContext();
@@ -23,6 +24,7 @@ export function Routing() {
                         <Route index element={<Alumno1 />} />
                         <Route path="materia" element={<Alumno2 />} />
                         <Route path="matematicas" element={<Clase />} />
+                        <Route path="clases" element={<ClasesPorTema />} />
                     </Route>
                 )}
             </Routes>
