@@ -17,8 +17,6 @@ export function Routing() {
                 <Route path="alumno-1" element={<Alumno1 />}>
                     <Route path="matematicas" element={<Alumno1 />} />
                 </Route>
-                <Route path="alumno-2" element={<Alumno2></Alumno2>} />
-
             </Routes>
         </BrowserRouter>
     );
