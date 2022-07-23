@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Default } from "@/pages/Default";
 
 import Alumno1 from "../pages/Alumno1";
+import Maestro1 from "../pages/Maestro1";
 import Clase from "../pages/Clase";
 import Login from "../pages/Login";
 import LoginLogin from "../pages/LoginLogin";
@@ -38,6 +39,12 @@ export function Routing() {
                         <Route path="materia" element={<Alumno2 />} />
                     </Route>
                 )}
+                <Route path="alumno-2">
+                    <Route index element={<Alumno2 />} />
+                </Route>
+                <Route path="maestro-1">
+                    <Route index element={<Maestro1 />} />
+                </Route>
             </Routes>
         </BrowserRouter>
     );

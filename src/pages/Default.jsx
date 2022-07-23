@@ -14,6 +14,9 @@ export function Default() {
                 <li>
                     <Link to="/register">Go to Register page</Link>
                 </li>
+                <li>
+                    <Link to="/maestro-1">Go to Teacher 1 page</Link>
+                </li>
             </ul>
         </Layout>
     );
