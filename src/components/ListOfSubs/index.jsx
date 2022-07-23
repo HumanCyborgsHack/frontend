@@ -5,7 +5,7 @@ export function Sub({
     color = "#f7beef",
     image = "/images/math.svg",
     subject = "Español II",
-    link = "#",
+    link = "/alumno-1/matematicas",
     startsIn = false
 }) {
     return (

@@ -5,7 +5,7 @@ const props = {
     name: "Pedro"
 };
 
-const path = "/alumno-1";
+const path = "/alumno-2";
 
 const data = [
     {
@@ -13,17 +13,17 @@ const data = [
         subject: "Matemáticas",
         in: "En 30 min",
         color: "#688bdd",
-        link: path + "/matematicas",
+        link: path,
         img: "/images/math.webp"
     },
     {
         id: 2,
-        link: path + "/ingles",
+        link: path,
         img: "/assets/ALUMNO/HOME_MATERIAS/SeleccionArtesClase.png"
     },
     {
         id: 3,
-        link: path + "/naturales",
+        link: path,
         img: "/assets/ALUMNO/HOME_MATERIAS/SeleccionIdiomasClase.png"
     }
 ];

@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Styles from "./Styles";
 
 export default function DefaultCard({
@@ -10,8 +11,14 @@ export default function DefaultCard({
 }) {
     const classes = Styles();
 
+    const navigate = useNavigate();
+
     return (
-        <Box className={classes.box} style={{ backgroundColor: color }}>
+        <Box
+            className={classes.box}
+            style={{ backgroundColor: color }}
+            onClick={() => navigate("/alumno-1/matematicas/lineas-rectas")}
+        >
             <div
                 style={{
                     width: "40%",
