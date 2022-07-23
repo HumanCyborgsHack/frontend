@@ -21,6 +21,9 @@ export const GridContainer = styled.div`
             width: 50%;
         }
     }
+    & img {
+        border-radius: 25px;
+    }
 `;
 
 export const Item = styled(Link)(
@@ -29,8 +32,7 @@ export const Item = styled(Link)(
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: "1rem",
-        borderRadius: "40px"
+        borderRadius: "25px"
     },
     (props) => ({ backgroundColor: props.color })
 );

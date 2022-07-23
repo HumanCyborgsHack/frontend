@@ -36,7 +36,6 @@ export function Routing() {
                         </Route>
 
                         <Route path="materia" element={<Alumno2 />} />
-
                     </Route>
                 )}
             </Routes>
