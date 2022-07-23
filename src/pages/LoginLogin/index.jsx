@@ -6,9 +6,38 @@ import background from "@/assets/inicio/Top_Box_Azul.png";
 import { Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Section, LinkButton } from "./styles";
+import TextField from "@mui/material/TextField";
+
 import { Link } from "react-router-dom";
 
+import { useState } from "react";
+
 export default function Student1Page() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (email && password) {
+            const requestOptions = {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            };
+            const response = await fetch(
+                "https://poli-learning-backend.scm.azurewebsites.net/student/login",
+                requestOptions
+            );
+            const data = await response.json();
+            console.log(data);
+        } else {
+            alert("Please fill all the fields");
+        }
+    };
+
     return (
         <>
             <Grid
@@ -29,7 +58,7 @@ export default function Student1Page() {
                         sx={{
                             position: "relative",
                             width: "100%",
-                            marginTop: "3rem",
+                            marginTop: "1rem",
                             paddingRight: "2rem",
                             height: "100%",
                             alignItems: "center"
@@ -41,8 +70,17 @@ export default function Student1Page() {
                                 textAlign: "center"
                             }}
                         >
-                            Poli-learning
+                            ¡Hola de nuevo!
                         </h1>
+                        <p
+                            style={{
+                                paddingTop: "1rem",
+                                paddingBottom: "1rem",
+                                textAlign: "center"
+                            }}
+                        >
+                            Continuemos nuestra aventura
+                        </p>
                     </Box>
                 </Grid>
             </Grid>
@@ -54,24 +92,20 @@ export default function Student1Page() {
                     height: "100vh"
                 }}
             >
-                <h1
+                <TextField
+                    label={"Correo electronico"} //optional
                     style={{
-                        fontSize: "1.5rem"
+                        marginBottom: "1rem"
                     }}
-                >
-                    ¡Aprende a tu ritmo!
-                </h1>
-                <p
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <TextField
+                    label={"Contraseña"} //optional
                     style={{
-                        paddingTop: "3rem",
-                        fontSize: "1.5rem",
-                        paddingRight: "2rem",
-                        paddingLeft: "2rem"
+                        marginBottom: "1rem"
                     }}
-                >
-                    ¡Explora las maneras mas emocionantes de aprender con
-                    distintos profesores!
-                </p>
+                    onChange={(e) => setPassword(e.target.value)}
+                />
                 <button
                     style={{
                         backgroundColor: "#79E5D5",
@@ -79,25 +113,10 @@ export default function Student1Page() {
                         paddingRight: "7rem",
                         paddingLeft: "7rem"
                     }}
+                    onClick={handleSubmit}
                 >
-                    <Link to="/register/login">Iniciar sesión</Link>
+                    Iniciar sesión
                 </button>
-                <p
-                    style={{
-                        paddingTop: "3rem"
-                    }}
-                >
-                    ¿Eres nuevo?
-                    <Link
-                        to="/register/register"
-                        style={{
-                            color: "#79E5D5"
-                        }}
-                    >
-                        {" "}
-                        Registrate
-                    </Link>
-                </p>
             </section>
         </>
     );
