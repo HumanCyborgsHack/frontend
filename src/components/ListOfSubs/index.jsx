@@ -1,6 +1,24 @@
 import Layout from "@/components/Layout";
 import { GridContainer, Img, Item } from "./styles";
 
+export function Sub({
+    color = "#f7beef",
+    image = "/images/math.svg",
+    subject = "Español II",
+    link = "#",
+    startsIn = false
+}) {
+    return (
+        <Item to={link} color={color}>
+            <Img src={image} alt="" />
+            <section>
+                <h3>{subject}</h3>
+                <p>{startsIn && startsIn}</p>
+            </section>
+        </Item>
+    );
+}
+
 export default function ListOfSubs({ data }) {
     return (
         <Layout>

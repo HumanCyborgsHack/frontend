@@ -5,7 +5,7 @@ import Alumno1 from "../pages/Alumno1";
 import Clase from "../pages/Clase";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-//import Alumno2 from "@/pages/Alumno2/Alumno2";
+import Alumno2 from "@/pages/Alumno2/Alumno2";
 import { useGlobalContext } from "@/context/global";
 
 export function Routing() {
@@ -23,10 +23,10 @@ export function Routing() {
                 {user.role === "alumno" && (
                     <Route path="alumno-1">
                         <Route index element={<Alumno1 />} />
+                        <Route path="materia" element={<Alumno2 />} />
                         <Route path="matematicas" element={<Clase />} />
                     </Route>
                 )}
-                {/*<Route path="alumno-2" element={<Alumno2></Alumno2>} />*/}
             </Routes>
         </BrowserRouter>
     );
