@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 import ListOfSubs from "@/components/ListOfSubs";
 
 const props = {
-    name: "Pedro"
+    name: "Ana Sofía"
 };
 
-const path = "/alumno-1";
+const path = "/maestro-1";
 
 const data = [
     {
@@ -33,7 +33,7 @@ export default function Student1Page() {
     return (
         <>
             <Header name={name}>
-                <h3>¡Llegó la hora de aprender!</h3>
+                <h3>¡Llegó la hora de enseñar!</h3>
             </Header>
             <ListOfSubs data={data} />
         </>
