@@ -1,10 +1,10 @@
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Search from "@/components/Search";
+import GoBackArrow from "@/components/GoBackArrow";
 import logo from "@/assets/inicio/Logo.png";
 import background from "@/assets/inicio/Top_Box_Azul.png";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { Section, LinkButton } from "./styles";
+import { Section } from "./styles";
 
 export default function Header({ name, children, searchDisabled, isBack }) {
     return (
@@ -15,14 +15,13 @@ export default function Header({ name, children, searchDisabled, isBack }) {
                 backgroundSize: "cover",
                 backgroundColor: "#6680d3",
                 // border: "1px solid #000",
-                borderRadius: "0px 0px 20px 20px"
+                borderRadius: "0px 0px 20px 20px",
+                minHeight: "100px"
             }}
         >
             <Grid item xs={3}>
                 {isBack ? (
-                    <LinkButton to="../">
-                        <ArrowBackIcon />
-                    </LinkButton>
+                    <GoBackArrow />
                 ) : (
                     <img src={logo} alt="" width={150} />
                 )}
