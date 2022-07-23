@@ -1,8 +1,10 @@
 # Poli-learning
 
-<img src="logo.jpeg" align="right" height="300px" width="300px" />
+<img src="logo.jpeg" align="right" height="250px" width="250px" />
 
 Proyecto para el track HCL del Talent Hackathon 2022
+
+
 
 ## Autores
 
@@ -13,3 +15,6 @@ Proyecto para el track HCL del Talent Hackathon 2022
 - [@sebastianmarines](https://www.github.com/sebastianmarines)
 
 
+## Diagrama de infraestructura
+
+![Diagrama](infra.png)
