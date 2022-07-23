@@ -3,7 +3,10 @@ import { Default } from "@/pages/Default";
 
 import Alumno1 from "../pages/Alumno1";
 import Clase from "../pages/Clase";
-//import Alumno2 from "@/pages/Alumno2/Alumno2";
+import Login from "../pages/Login";
+import LoginLogin from "../pages/LoginLogin";
+import Register from "../pages/Register";
+import Alumno2 from "@/pages/Alumno2/Alumno2";
 import { useGlobalContext } from "@/context/global";
 import VideoClase from "../pages/VideoClase";
 
@@ -16,9 +19,14 @@ export function Routing() {
                 <Route path="/" element={<Default />}>
                     <Route path="*" element={<Default />} />
                 </Route>
+                <Route path="/register/register" element={<Register />} />
+                <Route path="/register/login" element={<LoginLogin />} />
+                <Route path="/register" element={<Login />} />
+
                 {user.role === "alumno" && (
                     <Route path="alumno-1">
                         <Route index element={<Alumno1 />} />
+
                         <Route path="matematicas">
                             <Route index element={<Clase />} />
                             <Route
@@ -26,9 +34,11 @@ export function Routing() {
                                 element={<VideoClase />}
                             />
                         </Route>
+
+                        <Route path="materia" element={<Alumno2 />} />
+
                     </Route>
                 )}
-                {/*<Route path="alumno-2" element={<Alumno2></Alumno2>} />*/}
             </Routes>
         </BrowserRouter>
     );
