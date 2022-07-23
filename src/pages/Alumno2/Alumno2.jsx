@@ -26,7 +26,7 @@ const courses = [
     {
         id: 2,
         subject: "Habla Inglesa",
-        color: "#66d399",
+        color: "#f7c25a",
         img: "https://thecatapi.com/api/images/get?format=src&type=image"
     },
     {
