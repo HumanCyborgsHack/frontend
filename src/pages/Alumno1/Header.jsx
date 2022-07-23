@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import Search from "@/components/Search";
 
-export default function Header({ name }) {
+export default function Header({ name, children }) {
     return (
         <Grid
             container
@@ -26,7 +26,7 @@ export default function Header({ name }) {
                     }}
                 >
                     <h1>Hola! {name}</h1>
-                    <h3>¡Llegó la hora de aprender!</h3>
+                    {children}
                 </Box>
             </Grid>
 
