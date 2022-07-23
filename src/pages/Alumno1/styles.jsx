@@ -13,7 +13,7 @@ export const GridContainer = styled.div`
         & section {
             font-size: 1.2rem;
             position: absolute;
-            right: 50px;
+            right: 1rem;
             text-align: right;
         }
         & img {
@@ -29,7 +29,7 @@ export const Item = styled.div(
         alignItems: "center",
         justifyContent: "center",
         padding: "1rem",
-        borderRadius: "0.5rem"
+        borderRadius: "40px"
     },
     (props) => ({ backgroundColor: props.color })
 );
